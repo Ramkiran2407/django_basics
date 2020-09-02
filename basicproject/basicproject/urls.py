@@ -19,6 +19,9 @@ from app.views import *
 from app.classviews import ToppingAddOns
 
 
+from django.conf.urls.static import static
+
+
 
 # from rest_framework import routers 
 
@@ -36,5 +39,5 @@ urlpatterns = [
     path('addons/', ToppingAddOns.as_view()),
     path('register/', include('app.rest_framework_urls')),
 
-] 
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # + router.urls
