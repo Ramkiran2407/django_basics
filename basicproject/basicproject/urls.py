@@ -18,7 +18,7 @@ from django.urls import path, include
 from app.views import *
 from app.classviews import ToppingAddOns
 
-
+from django.conf import settings
 from django.conf.urls.static import static
 
 

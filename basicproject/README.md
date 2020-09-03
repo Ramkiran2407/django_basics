@@ -63,6 +63,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') -->
 In urls.py file
 
 
+<!-- from django.conf import settings -->
 <!-- from django.conf.urls.static import static -->
 
 

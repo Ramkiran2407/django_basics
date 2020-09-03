@@ -20,6 +20,8 @@ from rest_framework.decorators import api_view
 
 from rest_framework.response import Response
 
+from .decorator import unauthenticated_user, allowed_users
+
 
 #Create your views here.
 
@@ -73,6 +75,13 @@ def order_pizza(request):
 
 #without using restframe work if we wanna make a API and its call we use decorator @api_view
 
+
 @api_view(['GET','POST'])
 def sample(request):
     return Response({'a':'a'})
+
+
+@allowed_users(allowed_roles= ['kiran'])
+@unauthenticated_user
+def live(request):
+    return HttpResponse("Welcome to live application !")

@@ -8,4 +8,5 @@ urlpatterns = [
     path('pizza_menu/', pizza_menu),
     path('order_pizza/', order_pizza ),
     path('sample_rest/', sample),
+    path('live/', live),
 ]
