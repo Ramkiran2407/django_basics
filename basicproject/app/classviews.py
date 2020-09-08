@@ -23,3 +23,7 @@ class RegisterEmployees(viewsets.ModelViewSet):
 class EmployeeRegister(viewsets.ModelViewSet):
     queryset = EmployeeRegister.objects.all() 
     serializer_class = EmployeeRegisterSerializer 
+
+    def send_the_mail(self, request):
+        print("hello")
+        return Response("mail sent successfully")

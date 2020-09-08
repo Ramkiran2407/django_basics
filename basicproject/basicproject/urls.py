@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app.views import *
-from app.classviews import ToppingAddOns
+from app.classviews import ToppingAddOns,EmployeeRegister
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -38,6 +38,6 @@ urlpatterns = [
     path('', include('app.urls')),
     path('addons/', ToppingAddOns.as_view()),
     path('register/', include('app.rest_framework_urls')),
-
+    # path('point/', EmployeeRegister.as_view({'get': "send_the_mail"}))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # + router.urls
