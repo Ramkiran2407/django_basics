@@ -26,3 +26,5 @@ class EmployeeRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = EmployeeRegister
         fields = '__all__'
+
+

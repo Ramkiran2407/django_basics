@@ -9,4 +9,7 @@ urlpatterns = [
     path('order_pizza/', order_pizza ),
     path('sample_rest/', sample),
     path('live/', live),
+    path('object_404/', object_404),
+    path('re_direct/', re_direct),
+
 ]

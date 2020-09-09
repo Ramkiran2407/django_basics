@@ -85,3 +85,17 @@ def sample(request):
 @unauthenticated_user
 def live(request):
     return HttpResponse("Welcome to live application !")
+
+
+from django.shortcuts import get_object_or_404
+
+def object_404(request):
+    order_details = get_object_or_404(OrderDetails, pk=1)
+    print(order_details)
+    return HttpResponse("query")
+
+
+from django.shortcuts import redirect
+
+def re_direct(request):
+    return redirect("/object_404", )
